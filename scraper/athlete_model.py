@@ -207,7 +207,7 @@ for _ in range(len(tix)):
 
 model = Sequential()  
 
-#model.add(Embedding(19501,2, input_length=15, mask_zero=True))
+
 model.add(Masking(mask_value=0, input_shape=(1,size)))
 model.add(LSTM(128, input_length = 1, input_dim = size, return_sequences=True))
 model.add(Dropout(0.5))
