@@ -1,0 +1,105 @@
+<html>
+   <head>
+      <title>Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="predict.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+       <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+       <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script src="javaScript/animate.js"></script>
+
+     <script type="text/javascript" src="javaScript/drawChart.js"></script>
+   <script type="text/javascript" src = "javaScript/ScatterPlot.js"></script>
+      <script src="javaScript/addFields.js"></script>
+      <script src="javaScript/dateConvert.js"></script>
+      <script src="javaScript/visability.js"></script>
+      <script src="javaScript/nullGraph.js"></script>
+      <script src="javaScript/jsonName.js"></script>
+      <script src="javaScript/otherName.js"></script>
+
+      <script>if (window.module) module = window.module;</script>
+      <script>
+      $(document).ready(function(){
+        $('.parallax').parallax();
+        });
+     </script>
+
+   </head>
+   <ul id="dropdown1" class="dropdown-content black" style="width: 300px !important">
+     <li><a href="login.html" class = "white-text">Sign Out</a></li>
+   </ul>
+   <div class="navbar-fixed">
+     <nav class="black">
+        <div class="nav-wrapper">
+          <a href="home.html" class="brand-logo center">Track Predict</a>
+           <i class="left large material-icons">trending_up</i>
+           <ul class="left hide-on-med-and-down black">
+              <li> <a href="home.html"  <a class="waves-effect waves-light btn black">Home</a></a></li>
+              <li> <a href="predict.html"  <a class="waves-effect waves-light btn black">Predict</a></a></li>
+              <li> <a href="recruit.html"  <a class="waves-effect waves-light btn black">Recruit</a></a></li>
+
+           </ul>
+           <ul class="right hide-on-med-and-down black">
+              <li> <a href="model.html"  <a class="waves-effect waves-light btn black">Model</a></a></li>
+
+              <li><a class="dropdown-button black" data-beloworigin="true" id = "name" href="#!" data-activates="dropdown1">Dropdown</a></li>
+           </ul>
+        </div>
+     </nav>
+   </div>
+
+
+
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="trackyourself3.jpeg"></div>
+  </div>
+
+
+
+   <body onLoad="javascript:nullGraphMethod();" class="responsive-img">
+     <h2 class="header">Predict Your Future Times</h2>
+     <p class="grey-text text-darken-3 lighten-3">Please type in the number of times you would like to enter below. For the most accurate results we ask that you please type in the times and dates in order by date. More instruction is given for data entry after typing in the amount of times. </p>
+     <div class= "hundredWH" >
+      <div class="row black font heightScroll reSizeWidth left" style="overflow: scroll;">
+         <label for="name">Please type in Number of Times: (max. 16)</label></br>
+         <input type="number" id="member" name="member" value="" max="16" placeholder="Number of Times"></br>
+
+         <div id="container" class="halfWidth left input-field s1">
+            <a href="#" class="left black waves-effect waves-light btn" id="filldetails" onclick="javascript:addFields(); this.onclick=null;">Add Times</a></br>
+            <br>
+         </div>
+         <br><br>
+         <div id="container2" class= "halfWidth right input-field s2" >
+         </div>
+
+         <div class="col m12">
+            <p class="center-align">
+               <input class="center black waves-effect waves-light btn" type="submit" onclick="javascript:othername();">
+            </p>
+
+         </div>
+      </div>
+         <div class="row font bothGraphDiv center-align right" style = "background:white">
+              <div id= "curve_chart" style="height:500px;">
+              </div>
+         </div>
+      </div>
+   </body>
+
+   <div class="parallax-container">
+     <div class="parallax"><img src="sprint3.jpg"></div>
+   </div>
+   <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+
+
+   </script>
+
+
+</html>

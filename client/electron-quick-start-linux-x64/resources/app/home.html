@@ -1,0 +1,91 @@
+<html>
+   <head>
+      <title>Home</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="login.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+	  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+          <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		 <script src="javaScript/animate.js"></script>
+
+        <script>if (window.module) module = window.module;</script>
+        <script>
+        $(document).ready(function(){
+          $('.parallax').parallax();
+          });
+       </script>
+  </head>
+
+  <ul id="dropdown1" class="dropdown-content black" style="width: 300px !important">
+    <li><a href="login.html" class = "white-text">Sign Out</a></li>
+  </ul>
+  <div class="navbar-fixed">
+    <nav class="black">
+       <div class="nav-wrapper">
+         <a href="home.html" class="brand-logo center">Track Predict</a>
+          <i class="left large material-icons">trending_up</i>
+          <ul class="left hide-on-med-and-down black">
+             <li> <a href="home.html"  <a class="waves-effect waves-light btn black">Home</a></a></li>
+             <li> <a href="predict.html"  <a class="waves-effect waves-light btn black">Predict</a></a></li>
+             <li> <a href="recruit.html"  <a class="waves-effect waves-light btn black">Recruit</a></a></li>
+
+          </ul>
+          <ul class="right hide-on-med-and-down black">
+             <li> <a href="model.html"  <a class="waves-effect waves-light btn black">Model</a></a></li>
+
+             <li><a class="dropdown-button black" data-beloworigin="true" id = "name" href="#!" data-activates="dropdown1">Dropdown</a></li>
+          </ul>
+       </div>
+    </nav>
+  </div>
+
+  <body class="responsive-img" style="background-image:url(track2.jpg)" style = "color:black" >
+   </body>
+   <div class="parallax-container">
+     <div class="parallax"><img src="track.jpg"></div>
+   </div>
+
+   <div class="section white">
+     <div class="row container">
+     <h2 class="header">Welcome to Track Predict</h2>
+       <p class="grey-text text-darken-3 lighten-3">Click the image below to start predicting your future times today. Are you a recruiter scoping for athletes? Keep scrolling down and check out our recruiting section.</p>
+          <a href="predict.html"><img class="responsive-img" src="tracky.jpg">
+       </div>
+     </div>
+
+   <div class="parallax-container">
+     <div class="parallax"><img src="trackyourself3.jpeg"></div>
+   </div>
+
+   <div class="section white">
+     <div class="row container">
+     <h2 class="header"style = "color:black">Trust our Model</h2>
+       <p class="grey-text text-darken-3 lighten-3">Click the image below to see a histogram of our models margin of error.</p>
+      <a href="model.html"><img class="responsive-img" src="curve.jpg">
+       </div>
+     </div>
+   <div class="parallax-container">
+     <div class="parallax"><img src="sprint3.jpg"></div>
+   </div>
+   <div class="section white">
+     <div class="row container">
+     <h2 class="header" style = "color:black">Recruit</h2>
+       <p class="grey-text text-darken-3 lighten-3">Recruiters can easily scope out potential athletes by predicting multiple athletes at the same time. Just follow the steps on the recruit page and start recruiting.</p>
+         <a href="recruit.html"><img class ="responsive-img" src="recruit.jpg">
+       </div>
+     </div>
+   <div class="parallax-container">
+     <div class="parallax"><img src="track2.jpg"></div>
+   </div>
+   <script>
+     // You can also require other files to run in this process
+     require('./renderer.js')
+
+   </script>
+    <script src="javaScript/jsonName.js"></script>
+<script src="javaScript/urlLoader.js"></script>
+</html>

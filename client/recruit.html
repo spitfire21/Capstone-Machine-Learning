@@ -1,0 +1,103 @@
+<html>
+   <head>
+      <title>Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="recruit.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+       <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <script src="javaScript/dateConvert.js"></script>
+      <script src="javaScript/visability.js"></script>
+      <script src="javaScript/nullGraph.js"></script>
+      <script src="javaScript/jsonName.js"></script>
+      <script src="javaScript/otherName.js"></script>
+      <script src="javaScript/loadFile.js"></script>
+      <script src="javaScript/uploadFile.js"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript" src = "javaScript/ScatterPlot.js"></script>
+      <script src="javaScript/addFields.js"></script>
+       <script src="javaScript/animate.js"></script>
+       <script>if (window.module) module = window.module;</script>
+       <script>
+       $(document).ready(function(){
+         $('.parallax').parallax();
+         });
+      </script>
+
+   </head>
+   <ul id="dropdown1" class="dropdown-content black" style="width: 300px !important">
+     <li><a href="login.html" class = "white-text">Sign Out</a></li>
+   </ul>
+   <div class="navbar-fixed">
+     <nav class="black">
+        <div class="nav-wrapper">
+          <a href="home.html" class="brand-logo center">Track Predict</a>
+           <i class="left large material-icons">trending_up</i>
+           <ul class="left hide-on-med-and-down black">
+              <li> <a href="home.html"  <a class="waves-effect waves-light btn black">Home</a></a></li>
+              <li> <a href="predict.html"  <a class="waves-effect waves-light btn black">Predict</a></a></li>
+              <li> <a href="recruit.html"  <a class="waves-effect waves-light btn black">Recruit</a></a></li>
+
+           </ul>
+           <ul class="right hide-on-med-and-down black">
+              <li> <a href="model.html"  <a class="waves-effect waves-light btn black">Model</a></a></li>
+
+              <li><a class="dropdown-button black" data-beloworigin="true" id = "name" href="#!" data-activates="dropdown1">Dropdown</a></li>
+           </ul>
+        </div>
+     </nav>
+   </div>
+
+
+
+
+     <div class="parallax-container">
+       <div class="parallax"><img src="foggytrack.jpeg"></div>
+     </div>
+
+
+
+   <body onLoad="javascript:loadJSON(); javascript:nullGraphMethod();" >
+     <h2 class="header">Predict Your Future Times</h2>
+     <p class="grey-text text-darken-3 lighten-3">Please type in the number of times you would like to enter below. For the most accurate results we ask that you please type in the times and dates in order by date. More instruction is given for data entry after typing in the amount of times. </p>
+        <b><p class="grey-text text-darken-3 lighten-3" style="text-align:center;">In the graph the data for each player is split into two lines. Actual and Predicted.</p></b>
+        <b><p class="grey-text text-darken-3 lighten-3" style="text-align:center;">(Click on the athlete names to turn their graph ON/OFF)</p></b>
+
+     <div class= "hundredWH" >
+      <div class="row black font heightScroll reSizeWidth  left" style="overflow:scroll;">
+        <p>Please download formatted excel file and save as CSV.</p>
+        <a href="formattedTimes.xlsx">formattedTimes.xlsx</a>
+
+
+        <form action="http://localhost:8080/upload" method="post" enctype="multipart/form-data">
+            <br><p>Please upload formatted CSV file.<p>
+            <input id="upload_file" type="file" name="upload_file" /><br><br>
+            <input class="center black waves-effect waves-light btn" type="button" value="Upload" onclick="loadFile()" />
+        </form>
+
+
+      </div>
+      <div class="bothGraphDiv" style="overflow:scroll;">
+         <div id= "chart_div" class="row font heightGraph reSizeGraphD center-align right" style = "background:white">
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript" src="javaScript/drawChartRecruit.js"></script>
+         </div>
+
+      </div>
+      <div>
+   </body>
+
+
+
+   <div class="parallax-container">
+     <div class="parallax"><img src="workrecruit.jpeg"></div>
+   </div>
+
+   <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+
+   </script>
+</html>

@@ -1,0 +1,87 @@
+<html>
+   <head>
+      <title>Home</title>
+  	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="login.css">
+      <link rel="stylesheet" href="predict.css">
+  	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  	  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+       <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <script src="javaScript/jsonName.js"></script>
+      <script src="javaScript/animate.js"></script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script src="javaScript/histogram.js"></script>
+      <script>if (window.module) module = window.module;</script>
+      <script>$(document).ready(function(){
+           $('.parallax').parallax();
+         });
+
+      </script>
+    </head>
+
+    <ul id="dropdown1" class="dropdown-content black" style="width: 300px !important">
+      <li><a href="login.html" class = "white-text">Sign Out</a></li>
+    </ul>
+    <div class="navbar-fixed">
+      <nav class="black">
+         <div class="nav-wrapper">
+           <a href="home.html" class="brand-logo center">Track Predict</a>
+            <i class="left large material-icons">trending_up</i>
+            <ul class="left hide-on-med-and-down black">
+               <li> <a href="home.html"  <a class="waves-effect waves-light btn black">Home</a></a></li>
+               <li> <a href="predict.html"  <a class="waves-effect waves-light btn black">Predict</a></a></li>
+               <li> <a href="recruit.html"  <a class="waves-effect waves-light btn black">Recruit</a></a></li>
+
+            </ul>
+            <ul class="right hide-on-med-and-down black">
+               <li> <a href="model.html"  <a class="waves-effect waves-light btn black">Model</a></a></li>
+
+               <li><a class="dropdown-button black" data-beloworigin="true" id = "name" href="#!" data-activates="dropdown1">Dropdown</a></li>
+            </ul>
+         </div>
+      </nav>
+    </div>
+
+
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="graphing.jpeg"></div>
+  </div>
+
+
+
+  <body class="responsive-img">
+    <h2 class="header">Our Model</h2>
+    <p class="grey-text text-darken-3 lighten-3">This histogram show the accuracy of our model. It shows that the majority of the times are within a second and most are closer to zero...</p>
+      <br/>
+      <div id="chart_div" class="row black center" style="width: 1200px; height: 500px;">
+      </div>
+
+      <div class="parallax-container">
+     <div class="parallax"><img src="track.jpg"></div>
+      </div>
+      <h2 class="header">Scatter Plot</h2>
+      <p class="grey-text text-darken-3 lighten-3">This scatter plot shows where the majority of the predictions end up relative to time and month.</p>
+        <br/>
+      <div id="chart2_div" class="row black center" style="width: 1200px; height: 500px;">
+      </div>
+   </body>
+
+   <div class="parallax-container">
+     <div class="parallax"><img src="workrecruit.jpeg"></div>
+   </div>
+
+   <script>
+     // You can also require other files to run in this process
+     require('./renderer.js')
+
+   </script>
+<script>
+
+
+
+ </script>
+</html>

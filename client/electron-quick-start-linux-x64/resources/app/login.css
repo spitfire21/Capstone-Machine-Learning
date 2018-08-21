@@ -1,0 +1,43 @@
+.reSizeWidth {
+    width: 600px;
+}
+.fullWidth {
+  width: auto;
+}
+.hWidth {
+  width: 100%;
+}
+.thirdWidth{
+  width: 30%;
+}
+
+.height{
+  height: 50%;
+}
+.transparent {
+    opacity: 0.5;
+    background-color: black;
+
+}
+.font{
+  color:white;
+}
+.parallax-container {
+      height: 400px;
+    }
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    background-color:black;
+    color: white;
+    border: 2px solid gray;
+}
+
+
+a:visited {
+    color: white;
+}
